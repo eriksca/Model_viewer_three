@@ -39,8 +39,6 @@
 		</script> !-->
 		
 		<script src="js/gltfLoader.js">
-		
-		
 		</script> 
 		<script> const loader = new GLTFLoader();
 
