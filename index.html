@@ -23,8 +23,6 @@ const scene = new THREE.Scene();
 			
 
 const loader = new THREE.GLTFLoader();
-loader.render(camera,scene);
-
 
 // Load a glTF resource
 loader.load(
@@ -40,6 +38,7 @@ loader.load(
 		gltf.scenes; // Array<THREE.Group>
 		gltf.cameras; // Array<THREE.Camera>
 		gltf.asset; // Object
+		renderer.render(gltf.scene,gltf.camera);
 
 	},
 	// called while loading is progressing
@@ -55,6 +54,7 @@ loader.load(
 		console.log(error);
 
 	}
+	
 	
 	);
 	
