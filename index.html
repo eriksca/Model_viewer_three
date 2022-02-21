@@ -42,6 +42,7 @@ loader.load(
 		
 		const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light );
+scene.light=light;
 console.log(gltf.asset);
 renderer.render(scene,camera);
 	},
