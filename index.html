@@ -38,7 +38,9 @@ loader.load(
 		gltf.scenes; // Array<THREE.Group>
 		gltf.cameras; // Array<THREE.Camera>
 		gltf.asset; // Object
-		renderer.render(scene,camera);
+		var light=new THREE.HemisphereLight(0xffffff,0x000000,2);
+		scene.add(light);
+		
 
 	},
 	// called while loading is progressing
