@@ -31,9 +31,8 @@ loader.load(
 	// called when the resource is loaded
 	function ( gltf ) {
 
+		gltf.scene.scale.set(0.1,0.1,0.1);
 		scene.add( gltf.scene);
-
-
 		gltf.animations; // Array<THREE.AnimationClip>
 		gltf.scene; // THREE.Group
 		gltf.scenes; // Array<THREE.Group>
