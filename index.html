@@ -30,7 +30,8 @@ loader.load(
 	'assets/hat.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
-		const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+		const light = new THREE.AmbientLight( 0x404040,10 );
+		 // soft white light
 scene.add( light );
 scene.light=light;
 		gltf.scene.scale.set(0.01,0.01,0.01);
