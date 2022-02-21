@@ -8,7 +8,8 @@
 		</style>
 	</head>
 	<body>
-		<script src="/js/three.js"></script>
+		<!--<script src="/js/three.js"></script>-->
+		<!--<script src="/js/gltfLoader.js"></script>-->
 		<!--<script>
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -37,10 +38,9 @@
 			animate();
 			conssole.log(cube);
 		</script> !-->
-		
-		<script src="/js/gltfLoader.js"></script>
-		 
-		<script> const loader = new GLTFLoader();
+		<script src="https://cdn.jsdelivr.net/npm/three@0.115/build/three.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.115/examples/js/loaders/GLTFLoader.js">
+const loader = new GLTFLoader();
 
 // Optional: Provide a DRACOLoader instance to decode compressed mesh data
 const dracoLoader = new DRACOLoader();
@@ -48,9 +48,9 @@ dracoLoader.setDecoderPath( '/examples/js/libs/draco/' );
 loader.setDRACOLoader( dracoLoader );
 
 // Load a glTF resource
-loader.load("assets/scarpa.glb",
+loader.load(
 	// resource URL
-	'models/gltf/duck/duck.gltf',
+	'assets/scarpa.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
@@ -75,8 +75,12 @@ loader.load("assets/scarpa.glb",
 		console.log( 'An error happened' );
 
 	}
-);
-</script>
+);</script>
+
+		
+		
+		 
+
 		
 
 
