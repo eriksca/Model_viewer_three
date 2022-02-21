@@ -20,6 +20,10 @@ const scene = new THREE.Scene();
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
+			const light = new THREE.AmbientLight( 0x404040,10 );
+		 // soft white light
+scene.add( light );
+scene.light=light;
 			
 
 const loader = new THREE.GLTFLoader();
@@ -30,10 +34,7 @@ loader.load(
 	'assets/hat.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
-		const light = new THREE.AmbientLight( 0x404040,10 );
-		 // soft white light
-scene.add( light );
-scene.light=light;
+
 		gltf.scene.scale.set(0.01,0.01,0.01);
 		scene.add( gltf.scene);
 		gltf.animations; // Array<THREE.AnimationClip>
