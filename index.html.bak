@@ -71,6 +71,7 @@ loader.load(
 	function ( error ) {
 
 		console.log( 'An error happened' );
+		console.log(error);
 
 	}
 );</script>
