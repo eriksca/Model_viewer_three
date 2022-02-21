@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<script src="js/three.js"></script>
-		<script>
+		<!--<script>
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 			
@@ -36,7 +36,7 @@
 
 			animate();
 			conssole.log(cube);
-		</script>
+		</script> !-->
 		
 		<script src="js/gltfLoader.js">
 		
@@ -50,7 +50,7 @@ dracoLoader.setDecoderPath( '/examples/js/libs/draco/' );
 loader.setDRACOLoader( dracoLoader );
 
 // Load a glTF resource
-loader.load(
+loader.load("assets/scarpa.glb",
 	// resource URL
 	'models/gltf/duck/duck.gltf',
 	// called when the resource is loaded
